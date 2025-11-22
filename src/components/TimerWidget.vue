@@ -42,7 +42,7 @@ const emit = defineEmits<{
 const isEditing = ref(false)
 const editValue = ref('')
 const timeInput = ref<HTMLInputElement | null>(null)
-let intervalId: number | undefined = undefined
+const intervalId = ref<number | undefined>(undefined)
 
 const parseTime = (timeStr: string): number => {
   const [minutes, seconds] = timeStr.split(':').map(Number)
@@ -61,7 +61,7 @@ const start = () => {
   const updatedTimer = { ...props.timer, isRunning: true }
   emit('update', updatedTimer)
 
-  intervalId = window.setInterval(() => {
+  intervalId.value = window.setInterval(() => {
     const currentSeconds = parseTime(props.timer.time)
     if (currentSeconds > 0) {
       const newTime = formatTime(currentSeconds - 1)
@@ -71,14 +71,14 @@ const start = () => {
     }
   }, 1000)
   
-  updatedTimer.intervalId = intervalId
+  updatedTimer.intervalId = intervalId.value
   emit('update', updatedTimer)
 }
 
 const pause = () => {
-  if (intervalId) {
-    clearInterval(intervalId)
-    intervalId = undefined
+  if (intervalId.value) {
+    clearInterval(intervalId.value)
+    intervalId.value = undefined
   }
   emit('update', { ...props.timer, isRunning: false, intervalId: undefined })
 }
@@ -114,8 +114,8 @@ const deleteTimer = () => {
 }
 
 onUnmounted(() => {
-  if (intervalId) {
-    clearInterval(intervalId)
+  if (intervalId.value) {
+    clearInterval(intervalId.value)
   }
 })
 </script>
