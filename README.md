@@ -1,111 +1,139 @@
-# BDD Bookstore Project
+# Timer App E2E Tests
 
-## Lösningsbeskrivning
+E2E-tester för Timer & Notes Vue App skrivna med Playwright.
 
-Denna lösning implementerar ett enkelt bokhandelssystem med BDD (Behavior-Driven Development) med Gherkin och Behave.
+## App Status
 
-### Valda extrafunktioner
+**Appen är deployad och tillgänglig på:** `https://tovinou.github.io/test/`
 
-Jag valde följande tre extrafunktioner:
+## Projektstruktur
 
-1. **Rabattfunktion** - Ger 10% rabatt när kunden köper 4 eller fler böcker
-2. **Lagerhantering** - Förhindrar att kunder köper fler böcker än vad som finns i lager
-3. **Login-system** - Kräver inloggning för att genomföra köp
+```
+E2E_test/
+├── tests/
+│   ├── timer.spec.ts          # Timer-specifika tester
+│   ├── notes.spec.ts          # Antecknings-specifika tester  
+│   ├── widgets.spec.ts        # Widget-hanterings tester
+│   ├── themes.spec.ts         # Tema-relaterade tester
+│   ├── accessibility.spec.ts  # Tillgänglighet och användbarhet
+│   └── performance.spec.ts    # Prestandatester
+├── playwright.config.ts       # Playwright konfiguration
+├── package.json
+└── README.md
+```
 
-### Anledningar till valet
-
-- **Rabattfunktion**: Bra för att testa beräkningar och edge cases
-- **Lagerhantering**: Viktig real-world funktionalitet med komplex logik
-- **Login-system**: Grundläggande för många webbapplikationer, bra för att testa flöden
-
-### Implementeringsdetaljer
-
-- Använde Python-klasser för att simulera domänmodeller
-- Separerade steps i olika filer för bättre organisation
-- Använde Scenario Outline för att testa multiple cases
-- Implementerade proper error handling
-
-### Vad som var lätt
-
-- Strukturera Gherkin-scenarier
-- Skapa grundläggande step definitions
-- Implementera enkel varukorgslogik
-
-### Vad som var utmanande
-
-- Hantera state mellan olika steps
-- Implementera lagerreservationer
-- Skapa meningsfulla error messages
-- Hantera edge cases som negativa kvantiteter
-
-### Resurser för Del 2
-
-- Behave dokumentation: https://behave.readthedocs.io/
-- Gherkin reference: https://cucumber.io/docs/gherkin/
-- Python unit testing patterns
-- BDD best practices artiklar
-
-## Köra testen
+## Installation
 
 ```bash
-# Installera behave
-pip install behave
-
-# Kör alla test
-behave
-
-# Kör test med specifika taggar
-behave --tags=shopping_cart
-behave --tags=discount
-behave --tags=inventory
-behave --tags=login
+cd E2E_test
+npm install
+npx playwright install
 ```
 
-## Miljö och körning
-
-- Rekommenderat: kör i virtuell miljö (valfritt namn `.venv`):
+## Kör testerna
 
 ```bash
-python -m venv .venv
-# Windows PowerShell
-.\.venv\Scripts\Activate.ps1
-pip install behave
+# Kör alla tester
+npm test
+
+# Kör testerna mot lokal server
+TEST_URL=http://localhost:5173 npm test
+
+# Kör specifik testfil
+npx playwright test timer.spec.ts
+
+# Kör tester i headed mode (synlig webbläsare)
+npx playwright test --headed
+
+# Kör tester med interaktiv UI
+npx playwright test --ui
 ```
 
-- På Windows PowerShell: använd separata kommandon (inte `&&`).
-  Exempel:
+## Testresultat
 
-```powershell
-cd bookstore_bdd
-behave
+**Status:** ✅ 22 av 24 tester passerar
+
+- Timer-funktionalitet: ✅ Alla tester passerar
+- Antecknings-funktionalitet: ✅ Alla tester passerar
+- Tema-funktionalitet: ✅ Alla tester passerar
+- Widget-hantering: ✅ Alla tester passerar
+- Accessibility: ✅ Alla tester passerar
+- Performance: ✅ Alla tester passerar
+
+## Testscenarier
+
+### Timer-funktionalitet
+- Skapa och ta bort timer-widgets
+- Starta, pausa och återställa timers
+- Ändra tidsinställningar
+- Hantera flera widgets samtidigt
+
+### Anteckningsfunktionalitet
+- Skapa och ta bort antecknings-widgets
+- Redigera anteckningstext i realtid
+
+### Tema-funktionalitet
+- Byt temafärg (Light, Dark, Forest, Orange)
+- Tema persists efter page reload
+
+## Konfiguration
+
+Testerna är konfigurerade att använda den deployade versionen som standard. För lokal utveckling kan du använda miljövariabeln `TEST_URL`:
+
+```bash
+TEST_URL=http://localhost:5173 npm test
 ```
 
-## Projektstruktur (kort)
+Eller redigera `playwright.config.ts`:
+```typescript
+use: {
+  baseURL: process.env.TEST_URL || 'https://tovinou.github.io/test/',
+  // ...
+}
+```
 
-- `features/*.feature`: Gherkin-scenarier (`discount.feature`, `inventory.feature`, `login.feature`, `shopping_cart.feature`)
-- `features/steps/*.py`: Stegdefinitioner uppdelade per domän
-- `models/*.py`: Domänmodeller (`Book`, `Inventory`, `ShoppingCart`, `User`)
-- `features/environment.py`: Delad kontext/init (om tillämpligt)
+## Ytterligare kommandon
 
-## Viktiga implementationdetaljer
+```bash
+# Kör tester från specifikt projekt (t.ex. endast Chrome)
+npx playwright test --project=chromium
 
-- Lagerbegränsningar och felmeddelanden:
-  - Vid försök att överskrida lagersaldo svarar `Inventory.reserve_book(...)` med
-    "Only X copy/copies available" (matchar krav i feature-filerna).
-  - "Out of stock" returneras när saldo är 0.
-- Steg med tabeller som saknar `Author` hanteras: vi sätter författare till "Unknown Author" i sådana fall.
-- Kolon i stegtexter: feature-rader som slutar med `:` har motsvarande stegdefinitioner med `:` (t.ex. `Given the following inventory:`) för att undvika mismatch.
+# Kör tester i debug-läge
+npx playwright test --debug
+
+# Generera och visa testrapport
+npx playwright show-report
+
+# Kör tester med tag
+npx playwright test --grep "theme"
+
+# Kör tester i parallell
+npx playwright test --workers=4
+```
 
 ## Felsökning
 
-- AmbiguousStep: Kontrollera att samma stegtext inte är definierad i flera steg-filer. Ta bort dubbletter eller förena till en enda implementation.
-- Undefined steps: Säkerställ att stegtext (inklusive kolon och parametrar) exakt matchar mellan `.feature` och `steps/*.py`.
-- PowerShell-parsing: Använd separata kommandon istället för `&&`.
+Om tester misslyckas:
 
-## Exempel på körning
+1. Kontrollera att appen är tillgänglig på `https://tovinou.github.io/test/`
+2. För lokal testning, starta appen: `npm run dev` (i timer-vue-app mappen)
+3. Använd Playwrights UI-läge för att inspektera element:
+   ```bash
+   npx playwright test --ui
+   ```
+4. Använd `page.pause()` för att pausa execution och inspektera:
+   ```typescript
+   await page.pause();
+   ```
 
-```powershell
-# Från projektroten
-cd bookstore_bdd
-behave
-```
+## App Repository
+
+- **App-kod:** https://github.com/Tovinou/test.git
+- **Live app:** https://tovinou.github.io/test/
+
+## Support
+
+För frågor om dessa tester eller Playwright:
+
+- [Playwright Documentation](https://playwright.dev/)
+- [Timer App Repository](https://github.com/Tovinou/test.git)
