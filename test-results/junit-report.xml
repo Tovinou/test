@@ -1,0 +1,2638 @@
+<testsuites id="" name="" tests="64" failures="60" skipped="0" errors="0" time="582.909312">
+<testsuite name="accessibility.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="chromium" tests="1" failures="1" skipped="0" time="10.029" errors="0">
+<testcase name="Tillgänglighet › ska ha semantiska element och tillgänglig knapp" classname="accessibility.spec.ts" time="10.029">
+<failure message="accessibility.spec.ts:10:7 ska ha semantiska element och tillgänglig knapp" type="FAILURE">
+<![CDATA[  [chromium] › accessibility.spec.ts:10:7 › Tillgänglighet › ska ha semantiska element och tillgänglig knapp 
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator:  getByRole('button', { name: 'Ok nu kör vi' })
+    Expected: enabled
+    Received: disabled
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeEnabled" with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Ok nu kör vi' })
+        9 × locator resolved to <button disabled type="submit"> Ok nu kör vi </button>
+          - unexpected value "disabled"
+
+
+      10 |   test('ska ha semantiska element och tillgänglig knapp', async ({ page }) => {
+      11 |     await expect(page.getByRole('heading', { name: /Registrera dig/i })).toBeVisible();
+    > 12 |     await expect(page.getByRole('button', { name: 'Ok nu kör vi' })).toBeEnabled();
+         |                                                                      ^
+      13 |     await expect(page.getByPlaceholder('Namn')).toBeEditable();
+      14 |     await expect(page.getByPlaceholder('Födelseår')).toBeEditable();
+      15 |     await expect(page.getByPlaceholder('E-post')).toBeEditable();
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\accessibility.spec.ts:12:70
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-chromium\video.webm]]
+
+[[ATTACHMENT|accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="diagnostic.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="chromium" tests="1" failures="1" skipped="0" time="10.102" errors="0">
+<testcase name="Diagnostik › ska ladda sidan utan konsolfel" classname="diagnostic.spec.ts" time="10.102">
+<failure message="diagnostic.spec.ts:9:7 ska ladda sidan utan konsolfel" type="FAILURE">
+<![CDATA[  [chromium] › diagnostic.spec.ts:9:7 › Diagnostik › ska ladda sidan utan konsolfel ────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByPlaceholder('Namn')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByPlaceholder('Namn')
+
+
+      14 |
+      15 |     await expect(page.getByText('Registrera dig')).toBeVisible();
+    > 16 |     await expect(page.getByPlaceholder('Namn')).toBeVisible();
+         |                                                 ^
+      17 |     await expect(page.getByPlaceholder('Födelseår')).toBeVisible();
+      18 |     await expect(page.getByPlaceholder('E-post')).toBeVisible();
+      19 |     await expect(page.getByPlaceholder('Lösenord')).toBeVisible();
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\diagnostic.spec.ts:16:49
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-chromium\video.webm]]
+
+[[ATTACHMENT|diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="form-performance.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="chromium" tests="1" failures="1" skipped="0" time="10.006" errors="0">
+<testcase name="Formulärregistrering › ska ladda formuläret korrekt" classname="form-performance.spec.ts" time="10.006">
+<failure message="form-performance.spec.ts:12:7 ska ladda formuläret korrekt" type="FAILURE">
+<![CDATA[  [chromium] › form-performance.spec.ts:12:7 › Formulärregistrering › ska ladda formuläret korrekt ─
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByPlaceholder('Namn')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByPlaceholder('Namn')
+
+
+      11 |
+      12 |   test('ska ladda formuläret korrekt', async () => {
+    > 13 |     await expect(formPage.nameInput).toBeVisible();
+         |                                      ^
+      14 |     await expect(formPage.birthYearInput).toBeVisible();
+      15 |     await expect(formPage.emailInput).toBeVisible();
+      16 |     await expect(formPage.passwordInput).toBeVisible();
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-performance.spec.ts:13:38
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-chromium\video.webm]]
+
+[[ATTACHMENT|form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="form-registration.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="chromium" tests="9" failures="9" skipped="0" time="271.979" errors="0">
+<testcase name="Formulärregistrering › ska ladda formuläret korrekt" classname="form-registration.spec.ts" time="4.734">
+<failure message="form-registration.spec.ts:10:7 ska ladda formuläret korrekt" type="FAILURE">
+<![CDATA[  [chromium] › form-registration.spec.ts:10:7 › Formulärregistrering › ska ladda formuläret korrekt 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Lösenord')
+    Expected: visible
+    Error: strict mode violation: getByText('Lösenord') resolved to 2 elements:
+        1) <div>Lösenord</div> aka getByText('Lösenord', { exact: true })
+        2) <p class="error visible"> Lösenordet är för lätt, välj något svårare. </p> aka getByText('Lösenordet är för lätt, välj')
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByText('Lösenord')
+
+
+      13 |     await expect(page.getByText('Födelseår')).toBeVisible();
+      14 |     await expect(page.getByText('E-post')).toBeVisible();
+    > 15 |     await expect(page.getByText('Lösenord')).toBeVisible();
+         |                                              ^
+      16 |     await expect(page.getByRole('button', { name: 'Ok nu kör vi' })).toBeVisible();
+      17 |   });
+      18 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:15:46
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-chromium\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska kunna fylla i alla fält med giltig data" classname="form-registration.spec.ts" time="31.248">
+<failure message="form-registration.spec.ts:19:7 ska kunna fylla i alla fält med giltig data" type="FAILURE">
+<![CDATA[  [chromium] › form-registration.spec.ts:19:7 › Formulärregistrering › ska kunna fylla i alla fält med giltig data 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      19 |   test('ska kunna fylla i alla fält med giltig data', async ({ page }) => {
+      20 |     // Fyll i formuläret med giltig data
+    > 21 |     await page.fill('input[placeholder="Namn"]', 'Anna Svensson');
+         |                ^
+      22 |     await page.fill('input[placeholder="Födelseår"]', '1990');
+      23 |     await page.fill('input[placeholder="E-post"]', 'anna.svensson@example.com');
+      24 |     await page.fill('input[placeholder="Lösenord"]', 'Secure123');
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:21:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-chromium\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska visa valideringsfel för för enkelt lösenord" classname="form-registration.spec.ts" time="39.867">
+<failure message="form-registration.spec.ts:32:7 ska visa valideringsfel för för enkelt lösenord" type="FAILURE">
+<![CDATA[  [chromium] › form-registration.spec.ts:32:7 › Formulärregistrering › ska visa valideringsfel för för enkelt lösenord 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      31 |
+      32 |   test('ska visa valideringsfel för för enkelt lösenord', async ({ page }) => {
+    > 33 |     await page.fill('input[placeholder="Namn"]', 'Nisse');
+         |                ^
+      34 |     await page.fill('input[placeholder="Födelseår"]', '2001');
+      35 |     await page.fill('input[placeholder="E-post"]', 'example@gmail.com');
+      36 |     await page.fill('input[placeholder="Lösenord"]', '1234');
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:33:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-chromium\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska validera namnfältet" classname="form-registration.spec.ts" time="31.281">
+<failure message="form-registration.spec.ts:44:7 ska validera namnfältet" type="FAILURE">
+<![CDATA[  [chromium] › form-registration.spec.ts:44:7 › Formulärregistrering › ska validera namnfältet ─────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      44 |   test('ska validera namnfältet', async ({ page }) => {
+      45 |     // Testa tomt namn
+    > 46 |     await page.fill('input[placeholder="Namn"]', '');
+         |                ^
+      47 |     await page.click('button:has-text("Ok nu kör vi")');
+      48 |     await expect(page.getByText(/Namn är obligatoriskt|fältet måste fyllas i/i)).toBeVisible();
+      49 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:46:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-80f71-ing-ska-validera-namnfältet-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-80f71-ing-ska-validera-namnfältet-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-80f71-ing-ska-validera-namnfältet-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-80f71-ing-ska-validera-namnfältet-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-80f71-ing-ska-validera-namnfältet-chromium\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-80f71-ing-ska-validera-namnfältet-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska validera födelseår" classname="form-registration.spec.ts" time="38.532">
+<failure message="form-registration.spec.ts:55:7 ska validera födelseår" type="FAILURE">
+<![CDATA[  [chromium] › form-registration.spec.ts:55:7 › Formulärregistrering › ska validera födelseår ──────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Födelseår"]')
+
+
+      55 |   test('ska validera födelseår', async ({ page }) => {
+      56 |     // Testa ogiltigt år
+    > 57 |     await page.fill('input[placeholder="Födelseår"]', '1800');
+         |                ^
+      58 |     await page.click('button:has-text("Ok nu kör vi")');
+      59 |     await expect(page.getByText(/Ogiltigt födelseår/i)).toBeVisible();
+      60 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:57:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-chromium\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska validera e-postformat" classname="form-registration.spec.ts" time="31.7">
+<failure message="form-registration.spec.ts:70:7 ska validera e-postformat" type="FAILURE">
+<![CDATA[  [chromium] › form-registration.spec.ts:70:7 › Formulärregistrering › ska validera e-postformat ───
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="E-post"]')
+
+
+      69 |
+      70 |   test('ska validera e-postformat', async ({ page }) => {
+    > 71 |     await page.fill('input[placeholder="E-post"]', 'ogiltig-email');
+         |                ^
+      72 |     await page.click('button:has-text("Ok nu kör vi")');
+      73 |     await expect(page.getByText(/Ogiltig e-postadress/i)).toBeVisible();
+      74 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:71:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-b88db-g-ska-validera-e-postformat-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-b88db-g-ska-validera-e-postformat-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-b88db-g-ska-validera-e-postformat-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-b88db-g-ska-validera-e-postformat-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-b88db-g-ska-validera-e-postformat-chromium\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-b88db-g-ska-validera-e-postformat-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska validera lösenordskrav" classname="form-registration.spec.ts" time="31.255">
+<failure message="form-registration.spec.ts:82:7 ska validera lösenordskrav" type="FAILURE">
+<![CDATA[  [chromium] › form-registration.spec.ts:82:7 › Formulärregistrering › ska validera lösenordskrav ──
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Lösenord"]')
+
+
+      82 |   test('ska validera lösenordskrav', async ({ page }) => {
+      83 |     // Testa för kort lösenord
+    > 84 |     await page.fill('input[placeholder="Lösenord"]', '123');
+         |                ^
+      85 |     await page.click('button:has-text("Ok nu kör vi")');
+      86 |     await expect(page.getByText(/Lösenordet måste vara minst 6 tecken/i)).toBeVisible();
+      87 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:84:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-a37a1--ska-validera-lösenordskrav-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-a37a1--ska-validera-lösenordskrav-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-a37a1--ska-validera-lösenordskrav-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-a37a1--ska-validera-lösenordskrav-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-a37a1--ska-validera-lösenordskrav-chromium\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-a37a1--ska-validera-lösenordskrav-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska kunna skicka formuläret med alla giltiga fält" classname="form-registration.spec.ts" time="31.302">
+<failure message="form-registration.spec.ts:101:7 ska kunna skicka formuläret med alla giltiga fält" type="FAILURE">
+<![CDATA[  [chromium] › form-registration.spec.ts:101:7 › Formulärregistrering › ska kunna skicka formuläret med alla giltiga fält 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      100 |
+      101 |   test('ska kunna skicka formuläret med alla giltiga fält', async ({ page }) => {
+    > 102 |     await page.fill('input[placeholder="Namn"]', 'Maria Andersson');
+          |                ^
+      103 |     await page.fill('input[placeholder="Födelseår"]', '1985');
+      104 |     await page.fill('input[placeholder="E-post"]', 'maria.andersson@example.com');
+      105 |     await page.fill('input[placeholder="Lösenord"]', 'Lösenord123');
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:102:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-chromium\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › skalbarhetstest - flera användare samtidigt" classname="form-registration.spec.ts" time="32.06">
+<failure message="form-registration.spec.ts:113:7 skalbarhetstest - flera användare samtidigt" type="FAILURE">
+<![CDATA[  [chromium] › form-registration.spec.ts:113:7 › Formulärregistrering › skalbarhetstest - flera användare samtidigt 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      118 |
+      119 |     for (const user of testUsers) {
+    > 120 |       await page.fill('input[placeholder="Namn"]', user.name);
+          |                  ^
+      121 |       await page.fill('input[placeholder="Födelseår"]', user.year);
+      122 |       await page.fill('input[placeholder="E-post"]', user.email);
+      123 |       await page.fill('input[placeholder="Lösenord"]', user.password);
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:120:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-47c1e---flera-användare-samtidigt-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-47c1e---flera-användare-samtidigt-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-47c1e---flera-användare-samtidigt-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-47c1e---flera-användare-samtidigt-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-47c1e---flera-användare-samtidigt-chromium\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-47c1e---flera-användare-samtidigt-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="notes.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.119" errors="0">
+<testcase name="Anteckningar › ska kunna fylla i textfält och behålla värdet" classname="notes.spec.ts" time="32.119">
+<failure message="notes.spec.ts:4:7 ska kunna fylla i textfält och behålla värdet" type="FAILURE">
+<![CDATA[  [chromium] › notes.spec.ts:4:7 › Anteckningar › ska kunna fylla i textfält och behålla värdet ────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      4 |   test('ska kunna fylla i textfält och behålla värdet', async ({ page }) => {
+      5 |     await page.goto('https://tap-ht24-testverktyg.github.io/form-demo/');
+    > 6 |     await page.fill('input[placeholder="Namn"]', 'Min anteckning');
+        |                ^
+      7 |     await expect(page.getByPlaceholder('Namn')).toHaveValue('Min anteckning');
+      8 |   });
+      9 | });
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\notes.spec.ts:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-chromium\video.webm]]
+
+[[ATTACHMENT|notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="themes.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.522" errors="0">
+<testcase name="Teman › ska ha läsbar primärknapp med definierade stilar" classname="themes.spec.ts" time="0.522">
+</testcase>
+</testsuite>
+<testsuite name="timer.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.147" errors="0">
+<testcase name="Prestanda-timer › ska ladda inom 3 sekunder och validera inom 1 sekund" classname="timer.spec.ts" time="32.147">
+<failure message="timer.spec.ts:4:7 ska ladda inom 3 sekunder och validera inom 1 sekund" type="FAILURE">
+<![CDATA[  [chromium] › timer.spec.ts:4:7 › Prestanda-timer › ska ladda inom 3 sekunder och validera inom 1 sekund 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="E-post"]')
+
+
+       9 |     expect(loadMs).toBeLessThan(3000);
+      10 |
+    > 11 |     await page.fill('input[placeholder="E-post"]', 'ogiltig-email');
+         |                ^
+      12 |     await page.getByRole('button', { name: 'Ok nu kör vi' }).click();
+      13 |     const v0 = Date.now();
+      14 |     await expect(page.getByText(/Ogiltig e-postadress/i)).toBeVisible();
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\timer.spec.ts:11:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-chromium\video.webm]]
+
+[[ATTACHMENT|timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="widgets.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="chromium" tests="1" failures="1" skipped="0" time="32.233" errors="0">
+<testcase name="Widgets › ska interagera med alla fält och skicka" classname="widgets.spec.ts" time="32.233">
+<failure message="widgets.spec.ts:5:7 ska interagera med alla fält och skicka" type="FAILURE">
+<![CDATA[  [chromium] › widgets.spec.ts:5:7 › Widgets › ska interagera med alla fält och skicka ─────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByPlaceholder('Namn')
+
+
+       at ..\pages\form-page.ts:26
+
+      24 |
+      25 |   async fillForm(name: string, birthYear: string, email: string, password: string) {
+    > 26 |     await this.nameInput.fill(name);
+         |                          ^
+      27 |     await this.birthYearInput.fill(birthYear);
+      28 |     await this.emailInput.fill(email);
+      29 |     await this.passwordInput.fill(password);
+        at FormPage.fillForm (C:\Jensen\python\TEST_2\tests\e2e\pages\form-page.ts:26:26)
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\widgets.spec.ts:8:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-chromium\video.webm]]
+
+[[ATTACHMENT|widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="accessibility.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="firefox" tests="1" failures="1" skipped="0" time="11.108" errors="0">
+<testcase name="Tillgänglighet › ska ha semantiska element och tillgänglig knapp" classname="accessibility.spec.ts" time="11.108">
+<failure message="accessibility.spec.ts:10:7 ska ha semantiska element och tillgänglig knapp" type="FAILURE">
+<![CDATA[  [firefox] › accessibility.spec.ts:10:7 › Tillgänglighet › ska ha semantiska element och tillgänglig knapp 
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator:  getByRole('button', { name: 'Ok nu kör vi' })
+    Expected: enabled
+    Received: disabled
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeEnabled" with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Ok nu kör vi' })
+        8 × locator resolved to <button disabled type="submit"> Ok nu kör vi </button>
+          - unexpected value "disabled"
+
+
+      10 |   test('ska ha semantiska element och tillgänglig knapp', async ({ page }) => {
+      11 |     await expect(page.getByRole('heading', { name: /Registrera dig/i })).toBeVisible();
+    > 12 |     await expect(page.getByRole('button', { name: 'Ok nu kör vi' })).toBeEnabled();
+         |                                                                      ^
+      13 |     await expect(page.getByPlaceholder('Namn')).toBeEditable();
+      14 |     await expect(page.getByPlaceholder('Födelseår')).toBeEditable();
+      15 |     await expect(page.getByPlaceholder('E-post')).toBeEditable();
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\accessibility.spec.ts:12:70
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-firefox\video.webm]]
+
+[[ATTACHMENT|accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="diagnostic.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="firefox" tests="1" failures="1" skipped="0" time="16.257" errors="0">
+<testcase name="Diagnostik › ska ladda sidan utan konsolfel" classname="diagnostic.spec.ts" time="16.257">
+<failure message="diagnostic.spec.ts:9:7 ska ladda sidan utan konsolfel" type="FAILURE">
+<![CDATA[  [firefox] › diagnostic.spec.ts:9:7 › Diagnostik › ska ladda sidan utan konsolfel ─────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByPlaceholder('Namn')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByPlaceholder('Namn')
+
+
+      14 |
+      15 |     await expect(page.getByText('Registrera dig')).toBeVisible();
+    > 16 |     await expect(page.getByPlaceholder('Namn')).toBeVisible();
+         |                                                 ^
+      17 |     await expect(page.getByPlaceholder('Födelseår')).toBeVisible();
+      18 |     await expect(page.getByPlaceholder('E-post')).toBeVisible();
+      19 |     await expect(page.getByPlaceholder('Lösenord')).toBeVisible();
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\diagnostic.spec.ts:16:49
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-firefox\video.webm]]
+
+[[ATTACHMENT|diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="form-performance.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="firefox" tests="1" failures="1" skipped="0" time="23.408" errors="0">
+<testcase name="Formulärregistrering › ska ladda formuläret korrekt" classname="form-performance.spec.ts" time="23.408">
+<failure message="form-performance.spec.ts:12:7 ska ladda formuläret korrekt" type="FAILURE">
+<![CDATA[  [firefox] › form-performance.spec.ts:12:7 › Formulärregistrering › ska ladda formuläret korrekt ──
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByPlaceholder('Namn')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByPlaceholder('Namn')
+
+
+      11 |
+      12 |   test('ska ladda formuläret korrekt', async () => {
+    > 13 |     await expect(formPage.nameInput).toBeVisible();
+         |                                      ^
+      14 |     await expect(formPage.birthYearInput).toBeVisible();
+      15 |     await expect(formPage.emailInput).toBeVisible();
+      16 |     await expect(formPage.passwordInput).toBeVisible();
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-performance.spec.ts:13:38
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-firefox\video.webm]]
+
+[[ATTACHMENT|form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="form-registration.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="firefox" tests="9" failures="9" skipped="0" time="247.288" errors="0">
+<testcase name="Formulärregistrering › ska ladda formuläret korrekt" classname="form-registration.spec.ts" time="5.349">
+<failure message="form-registration.spec.ts:10:7 ska ladda formuläret korrekt" type="FAILURE">
+<![CDATA[  [firefox] › form-registration.spec.ts:10:7 › Formulärregistrering › ska ladda formuläret korrekt ─
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Lösenord')
+    Expected: visible
+    Error: strict mode violation: getByText('Lösenord') resolved to 2 elements:
+        1) <div>Lösenord</div> aka getByText('Lösenord', { exact: true })
+        2) <p class="error visible"> Lösenordet är för lätt, välj något svårare. </p> aka getByText('Lösenordet är för lätt, välj')
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByText('Lösenord')
+
+
+      13 |     await expect(page.getByText('Födelseår')).toBeVisible();
+      14 |     await expect(page.getByText('E-post')).toBeVisible();
+    > 15 |     await expect(page.getByText('Lösenord')).toBeVisible();
+         |                                              ^
+      16 |     await expect(page.getByRole('button', { name: 'Ok nu kör vi' })).toBeVisible();
+      17 |   });
+      18 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:15:46
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-firefox\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska kunna fylla i alla fält med giltig data" classname="form-registration.spec.ts" time="31.136">
+<failure message="form-registration.spec.ts:19:7 ska kunna fylla i alla fält med giltig data" type="FAILURE">
+<![CDATA[  [firefox] › form-registration.spec.ts:19:7 › Formulärregistrering › ska kunna fylla i alla fält med giltig data 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      19 |   test('ska kunna fylla i alla fält med giltig data', async ({ page }) => {
+      20 |     // Fyll i formuläret med giltig data
+    > 21 |     await page.fill('input[placeholder="Namn"]', 'Anna Svensson');
+         |                ^
+      22 |     await page.fill('input[placeholder="Födelseår"]', '1990');
+      23 |     await page.fill('input[placeholder="E-post"]', 'anna.svensson@example.com');
+      24 |     await page.fill('input[placeholder="Lösenord"]', 'Secure123');
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:21:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-firefox\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska visa valideringsfel för för enkelt lösenord" classname="form-registration.spec.ts" time="30.078">
+<failure message="form-registration.spec.ts:32:7 ska visa valideringsfel för för enkelt lösenord" type="FAILURE">
+<![CDATA[  [firefox] › form-registration.spec.ts:32:7 › Formulärregistrering › ska visa valideringsfel för för enkelt lösenord 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      31 |
+      32 |   test('ska visa valideringsfel för för enkelt lösenord', async ({ page }) => {
+    > 33 |     await page.fill('input[placeholder="Namn"]', 'Nisse');
+         |                ^
+      34 |     await page.fill('input[placeholder="Födelseår"]', '2001');
+      35 |     await page.fill('input[placeholder="E-post"]', 'example@gmail.com');
+      36 |     await page.fill('input[placeholder="Lösenord"]', '1234');
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:33:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-firefox\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska validera namnfältet" classname="form-registration.spec.ts" time="30.095">
+<failure message="form-registration.spec.ts:44:7 ska validera namnfältet" type="FAILURE">
+<![CDATA[  [firefox] › form-registration.spec.ts:44:7 › Formulärregistrering › ska validera namnfältet ──────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      44 |   test('ska validera namnfältet', async ({ page }) => {
+      45 |     // Testa tomt namn
+    > 46 |     await page.fill('input[placeholder="Namn"]', '');
+         |                ^
+      47 |     await page.click('button:has-text("Ok nu kör vi")');
+      48 |     await expect(page.getByText(/Namn är obligatoriskt|fältet måste fyllas i/i)).toBeVisible();
+      49 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:46:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-80f71-ing-ska-validera-namnfältet-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-80f71-ing-ska-validera-namnfältet-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-80f71-ing-ska-validera-namnfältet-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-80f71-ing-ska-validera-namnfältet-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-80f71-ing-ska-validera-namnfältet-firefox\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-80f71-ing-ska-validera-namnfältet-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska validera födelseår" classname="form-registration.spec.ts" time="30.107">
+<failure message="form-registration.spec.ts:55:7 ska validera födelseår" type="FAILURE">
+<![CDATA[  [firefox] › form-registration.spec.ts:55:7 › Formulärregistrering › ska validera födelseår ───────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Födelseår"]')
+
+
+      55 |   test('ska validera födelseår', async ({ page }) => {
+      56 |     // Testa ogiltigt år
+    > 57 |     await page.fill('input[placeholder="Födelseår"]', '1800');
+         |                ^
+      58 |     await page.click('button:has-text("Ok nu kör vi")');
+      59 |     await expect(page.getByText(/Ogiltigt födelseår/i)).toBeVisible();
+      60 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:57:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-firefox\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska validera e-postformat" classname="form-registration.spec.ts" time="30.095">
+<failure message="form-registration.spec.ts:70:7 ska validera e-postformat" type="FAILURE">
+<![CDATA[  [firefox] › form-registration.spec.ts:70:7 › Formulärregistrering › ska validera e-postformat ────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="E-post"]')
+
+
+      69 |
+      70 |   test('ska validera e-postformat', async ({ page }) => {
+    > 71 |     await page.fill('input[placeholder="E-post"]', 'ogiltig-email');
+         |                ^
+      72 |     await page.click('button:has-text("Ok nu kör vi")');
+      73 |     await expect(page.getByText(/Ogiltig e-postadress/i)).toBeVisible();
+      74 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:71:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-b88db-g-ska-validera-e-postformat-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-b88db-g-ska-validera-e-postformat-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-b88db-g-ska-validera-e-postformat-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-b88db-g-ska-validera-e-postformat-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-b88db-g-ska-validera-e-postformat-firefox\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-b88db-g-ska-validera-e-postformat-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska validera lösenordskrav" classname="form-registration.spec.ts" time="30.086">
+<failure message="form-registration.spec.ts:82:7 ska validera lösenordskrav" type="FAILURE">
+<![CDATA[  [firefox] › form-registration.spec.ts:82:7 › Formulärregistrering › ska validera lösenordskrav ───
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Lösenord"]')
+
+
+      82 |   test('ska validera lösenordskrav', async ({ page }) => {
+      83 |     // Testa för kort lösenord
+    > 84 |     await page.fill('input[placeholder="Lösenord"]', '123');
+         |                ^
+      85 |     await page.click('button:has-text("Ok nu kör vi")');
+      86 |     await expect(page.getByText(/Lösenordet måste vara minst 6 tecken/i)).toBeVisible();
+      87 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:84:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-a37a1--ska-validera-lösenordskrav-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-a37a1--ska-validera-lösenordskrav-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-a37a1--ska-validera-lösenordskrav-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-a37a1--ska-validera-lösenordskrav-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-a37a1--ska-validera-lösenordskrav-firefox\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-a37a1--ska-validera-lösenordskrav-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska kunna skicka formuläret med alla giltiga fält" classname="form-registration.spec.ts" time="30.105">
+<failure message="form-registration.spec.ts:101:7 ska kunna skicka formuläret med alla giltiga fält" type="FAILURE">
+<![CDATA[  [firefox] › form-registration.spec.ts:101:7 › Formulärregistrering › ska kunna skicka formuläret med alla giltiga fält 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      100 |
+      101 |   test('ska kunna skicka formuläret med alla giltiga fält', async ({ page }) => {
+    > 102 |     await page.fill('input[placeholder="Namn"]', 'Maria Andersson');
+          |                ^
+      103 |     await page.fill('input[placeholder="Födelseår"]', '1985');
+      104 |     await page.fill('input[placeholder="E-post"]', 'maria.andersson@example.com');
+      105 |     await page.fill('input[placeholder="Lösenord"]', 'Lösenord123');
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:102:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-firefox\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › skalbarhetstest - flera användare samtidigt" classname="form-registration.spec.ts" time="30.237">
+<failure message="form-registration.spec.ts:113:7 skalbarhetstest - flera användare samtidigt" type="FAILURE">
+<![CDATA[  [firefox] › form-registration.spec.ts:113:7 › Formulärregistrering › skalbarhetstest - flera användare samtidigt 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      118 |
+      119 |     for (const user of testUsers) {
+    > 120 |       await page.fill('input[placeholder="Namn"]', user.name);
+          |                  ^
+      121 |       await page.fill('input[placeholder="Födelseår"]', user.year);
+      122 |       await page.fill('input[placeholder="E-post"]', user.email);
+      123 |       await page.fill('input[placeholder="Lösenord"]', user.password);
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:120:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-47c1e---flera-användare-samtidigt-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-47c1e---flera-användare-samtidigt-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-47c1e---flera-användare-samtidigt-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-47c1e---flera-användare-samtidigt-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-47c1e---flera-användare-samtidigt-firefox\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-47c1e---flera-användare-samtidigt-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="notes.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="firefox" tests="1" failures="1" skipped="0" time="30.12" errors="0">
+<testcase name="Anteckningar › ska kunna fylla i textfält och behålla värdet" classname="notes.spec.ts" time="30.12">
+<failure message="notes.spec.ts:4:7 ska kunna fylla i textfält och behålla värdet" type="FAILURE">
+<![CDATA[  [firefox] › notes.spec.ts:4:7 › Anteckningar › ska kunna fylla i textfält och behålla värdet ─────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      4 |   test('ska kunna fylla i textfält och behålla värdet', async ({ page }) => {
+      5 |     await page.goto('https://tap-ht24-testverktyg.github.io/form-demo/');
+    > 6 |     await page.fill('input[placeholder="Namn"]', 'Min anteckning');
+        |                ^
+      7 |     await expect(page.getByPlaceholder('Namn')).toHaveValue('Min anteckning');
+      8 |   });
+      9 | });
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\notes.spec.ts:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-firefox\video.webm]]
+
+[[ATTACHMENT|notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="themes.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="firefox" tests="1" failures="0" skipped="0" time="5.827" errors="0">
+<testcase name="Teman › ska ha läsbar primärknapp med definierade stilar" classname="themes.spec.ts" time="5.827">
+</testcase>
+</testsuite>
+<testsuite name="timer.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="firefox" tests="1" failures="1" skipped="0" time="30.112" errors="0">
+<testcase name="Prestanda-timer › ska ladda inom 3 sekunder och validera inom 1 sekund" classname="timer.spec.ts" time="30.112">
+<failure message="timer.spec.ts:4:7 ska ladda inom 3 sekunder och validera inom 1 sekund" type="FAILURE">
+<![CDATA[  [firefox] › timer.spec.ts:4:7 › Prestanda-timer › ska ladda inom 3 sekunder och validera inom 1 sekund 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="E-post"]')
+
+
+       9 |     expect(loadMs).toBeLessThan(3000);
+      10 |
+    > 11 |     await page.fill('input[placeholder="E-post"]', 'ogiltig-email');
+         |                ^
+      12 |     await page.getByRole('button', { name: 'Ok nu kör vi' }).click();
+      13 |     const v0 = Date.now();
+      14 |     await expect(page.getByText(/Ogiltig e-postadress/i)).toBeVisible();
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\timer.spec.ts:11:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-firefox\video.webm]]
+
+[[ATTACHMENT|timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="widgets.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="firefox" tests="1" failures="1" skipped="0" time="30.569" errors="0">
+<testcase name="Widgets › ska interagera med alla fält och skicka" classname="widgets.spec.ts" time="30.569">
+<failure message="widgets.spec.ts:5:7 ska interagera med alla fält och skicka" type="FAILURE">
+<![CDATA[  [firefox] › widgets.spec.ts:5:7 › Widgets › ska interagera med alla fält och skicka ──────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByPlaceholder('Namn')
+
+
+       at ..\pages\form-page.ts:26
+
+      24 |
+      25 |   async fillForm(name: string, birthYear: string, email: string, password: string) {
+    > 26 |     await this.nameInput.fill(name);
+         |                          ^
+      27 |     await this.birthYearInput.fill(birthYear);
+      28 |     await this.emailInput.fill(email);
+      29 |     await this.passwordInput.fill(password);
+        at FormPage.fillForm (C:\Jensen\python\TEST_2\tests\e2e\pages\form-page.ts:26:26)
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\widgets.spec.ts:8:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-firefox\video.webm]]
+
+[[ATTACHMENT|widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="accessibility.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="webkit" tests="1" failures="1" skipped="0" time="12.601" errors="0">
+<testcase name="Tillgänglighet › ska ha semantiska element och tillgänglig knapp" classname="accessibility.spec.ts" time="12.601">
+<failure message="accessibility.spec.ts:10:7 ska ha semantiska element och tillgänglig knapp" type="FAILURE">
+<![CDATA[  [webkit] › accessibility.spec.ts:10:7 › Tillgänglighet › ska ha semantiska element och tillgänglig knapp 
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator:  getByRole('button', { name: 'Ok nu kör vi' })
+    Expected: enabled
+    Received: disabled
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeEnabled" with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Ok nu kör vi' })
+        8 × locator resolved to <button disabled type="submit"> Ok nu kör vi </button>
+          - unexpected value "disabled"
+
+
+      10 |   test('ska ha semantiska element och tillgänglig knapp', async ({ page }) => {
+      11 |     await expect(page.getByRole('heading', { name: /Registrera dig/i })).toBeVisible();
+    > 12 |     await expect(page.getByRole('button', { name: 'Ok nu kör vi' })).toBeEnabled();
+         |                                                                      ^
+      13 |     await expect(page.getByPlaceholder('Namn')).toBeEditable();
+      14 |     await expect(page.getByPlaceholder('Födelseår')).toBeEditable();
+      15 |     await expect(page.getByPlaceholder('E-post')).toBeEditable();
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\accessibility.spec.ts:12:70
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-webkit\video.webm]]
+
+[[ATTACHMENT|accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="diagnostic.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="webkit" tests="1" failures="1" skipped="0" time="8.719" errors="0">
+<testcase name="Diagnostik › ska ladda sidan utan konsolfel" classname="diagnostic.spec.ts" time="8.719">
+<failure message="diagnostic.spec.ts:9:7 ska ladda sidan utan konsolfel" type="FAILURE">
+<![CDATA[  [webkit] › diagnostic.spec.ts:9:7 › Diagnostik › ska ladda sidan utan konsolfel ──────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByPlaceholder('Namn')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByPlaceholder('Namn')
+
+
+      14 |
+      15 |     await expect(page.getByText('Registrera dig')).toBeVisible();
+    > 16 |     await expect(page.getByPlaceholder('Namn')).toBeVisible();
+         |                                                 ^
+      17 |     await expect(page.getByPlaceholder('Födelseår')).toBeVisible();
+      18 |     await expect(page.getByPlaceholder('E-post')).toBeVisible();
+      19 |     await expect(page.getByPlaceholder('Lösenord')).toBeVisible();
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\diagnostic.spec.ts:16:49
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-webkit\video.webm]]
+
+[[ATTACHMENT|diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="form-performance.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="webkit" tests="1" failures="1" skipped="0" time="6.744" errors="0">
+<testcase name="Formulärregistrering › ska ladda formuläret korrekt" classname="form-performance.spec.ts" time="6.744">
+<failure message="form-performance.spec.ts:12:7 ska ladda formuläret korrekt" type="FAILURE">
+<![CDATA[  [webkit] › form-performance.spec.ts:12:7 › Formulärregistrering › ska ladda formuläret korrekt ───
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByPlaceholder('Namn')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByPlaceholder('Namn')
+
+
+      11 |
+      12 |   test('ska ladda formuläret korrekt', async () => {
+    > 13 |     await expect(formPage.nameInput).toBeVisible();
+         |                                      ^
+      14 |     await expect(formPage.birthYearInput).toBeVisible();
+      15 |     await expect(formPage.emailInput).toBeVisible();
+      16 |     await expect(formPage.passwordInput).toBeVisible();
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-performance.spec.ts:13:38
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-webkit\video.webm]]
+
+[[ATTACHMENT|form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="form-registration.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="webkit" tests="9" failures="9" skipped="0" time="244.293" errors="0">
+<testcase name="Formulärregistrering › ska ladda formuläret korrekt" classname="form-registration.spec.ts" time="1.499">
+<failure message="form-registration.spec.ts:10:7 ska ladda formuläret korrekt" type="FAILURE">
+<![CDATA[  [webkit] › form-registration.spec.ts:10:7 › Formulärregistrering › ska ladda formuläret korrekt ──
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Lösenord')
+    Expected: visible
+    Error: strict mode violation: getByText('Lösenord') resolved to 2 elements:
+        1) <div>Lösenord</div> aka getByText('Lösenord', { exact: true })
+        2) <p class="error visible"> Lösenordet är för lätt, välj något svårare. </p> aka getByText('Lösenordet är för lätt, välj')
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByText('Lösenord')
+
+
+      13 |     await expect(page.getByText('Födelseår')).toBeVisible();
+      14 |     await expect(page.getByText('E-post')).toBeVisible();
+    > 15 |     await expect(page.getByText('Lösenord')).toBeVisible();
+         |                                              ^
+      16 |     await expect(page.getByRole('button', { name: 'Ok nu kör vi' })).toBeVisible();
+      17 |   });
+      18 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:15:46
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-webkit\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska kunna fylla i alla fält med giltig data" classname="form-registration.spec.ts" time="30.546">
+<failure message="form-registration.spec.ts:19:7 ska kunna fylla i alla fält med giltig data" type="FAILURE">
+<![CDATA[  [webkit] › form-registration.spec.ts:19:7 › Formulärregistrering › ska kunna fylla i alla fält med giltig data 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      19 |   test('ska kunna fylla i alla fält med giltig data', async ({ page }) => {
+      20 |     // Fyll i formuläret med giltig data
+    > 21 |     await page.fill('input[placeholder="Namn"]', 'Anna Svensson');
+         |                ^
+      22 |     await page.fill('input[placeholder="Födelseår"]', '1990');
+      23 |     await page.fill('input[placeholder="E-post"]', 'anna.svensson@example.com');
+      24 |     await page.fill('input[placeholder="Lösenord"]', 'Secure123');
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:21:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-webkit\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska visa valideringsfel för för enkelt lösenord" classname="form-registration.spec.ts" time="30.263">
+<failure message="form-registration.spec.ts:32:7 ska visa valideringsfel för för enkelt lösenord" type="FAILURE">
+<![CDATA[  [webkit] › form-registration.spec.ts:32:7 › Formulärregistrering › ska visa valideringsfel för för enkelt lösenord 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      31 |
+      32 |   test('ska visa valideringsfel för för enkelt lösenord', async ({ page }) => {
+    > 33 |     await page.fill('input[placeholder="Namn"]', 'Nisse');
+         |                ^
+      34 |     await page.fill('input[placeholder="Födelseår"]', '2001');
+      35 |     await page.fill('input[placeholder="E-post"]', 'example@gmail.com');
+      36 |     await page.fill('input[placeholder="Lösenord"]', '1234');
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:33:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-webkit\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska validera namnfältet" classname="form-registration.spec.ts" time="30.337">
+<failure message="form-registration.spec.ts:44:7 ska validera namnfältet" type="FAILURE">
+<![CDATA[  [webkit] › form-registration.spec.ts:44:7 › Formulärregistrering › ska validera namnfältet ───────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      44 |   test('ska validera namnfältet', async ({ page }) => {
+      45 |     // Testa tomt namn
+    > 46 |     await page.fill('input[placeholder="Namn"]', '');
+         |                ^
+      47 |     await page.click('button:has-text("Ok nu kör vi")');
+      48 |     await expect(page.getByText(/Namn är obligatoriskt|fältet måste fyllas i/i)).toBeVisible();
+      49 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:46:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-80f71-ing-ska-validera-namnfältet-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-80f71-ing-ska-validera-namnfältet-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-80f71-ing-ska-validera-namnfältet-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-80f71-ing-ska-validera-namnfältet-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-80f71-ing-ska-validera-namnfältet-webkit\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-80f71-ing-ska-validera-namnfältet-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska validera födelseår" classname="form-registration.spec.ts" time="30.437">
+<failure message="form-registration.spec.ts:55:7 ska validera födelseår" type="FAILURE">
+<![CDATA[  [webkit] › form-registration.spec.ts:55:7 › Formulärregistrering › ska validera födelseår ────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Födelseår"]')
+
+
+      55 |   test('ska validera födelseår', async ({ page }) => {
+      56 |     // Testa ogiltigt år
+    > 57 |     await page.fill('input[placeholder="Födelseår"]', '1800');
+         |                ^
+      58 |     await page.click('button:has-text("Ok nu kör vi")');
+      59 |     await expect(page.getByText(/Ogiltigt födelseår/i)).toBeVisible();
+      60 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:57:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-webkit\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska validera e-postformat" classname="form-registration.spec.ts" time="30.574">
+<failure message="form-registration.spec.ts:70:7 ska validera e-postformat" type="FAILURE">
+<![CDATA[  [webkit] › form-registration.spec.ts:70:7 › Formulärregistrering › ska validera e-postformat ─────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="E-post"]')
+
+
+      69 |
+      70 |   test('ska validera e-postformat', async ({ page }) => {
+    > 71 |     await page.fill('input[placeholder="E-post"]', 'ogiltig-email');
+         |                ^
+      72 |     await page.click('button:has-text("Ok nu kör vi")');
+      73 |     await expect(page.getByText(/Ogiltig e-postadress/i)).toBeVisible();
+      74 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:71:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-b88db-g-ska-validera-e-postformat-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-b88db-g-ska-validera-e-postformat-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-b88db-g-ska-validera-e-postformat-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-b88db-g-ska-validera-e-postformat-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-b88db-g-ska-validera-e-postformat-webkit\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-b88db-g-ska-validera-e-postformat-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska validera lösenordskrav" classname="form-registration.spec.ts" time="30.2">
+<failure message="form-registration.spec.ts:82:7 ska validera lösenordskrav" type="FAILURE">
+<![CDATA[  [webkit] › form-registration.spec.ts:82:7 › Formulärregistrering › ska validera lösenordskrav ────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Lösenord"]')
+
+
+      82 |   test('ska validera lösenordskrav', async ({ page }) => {
+      83 |     // Testa för kort lösenord
+    > 84 |     await page.fill('input[placeholder="Lösenord"]', '123');
+         |                ^
+      85 |     await page.click('button:has-text("Ok nu kör vi")');
+      86 |     await expect(page.getByText(/Lösenordet måste vara minst 6 tecken/i)).toBeVisible();
+      87 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:84:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-a37a1--ska-validera-lösenordskrav-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-a37a1--ska-validera-lösenordskrav-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-a37a1--ska-validera-lösenordskrav-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-a37a1--ska-validera-lösenordskrav-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-a37a1--ska-validera-lösenordskrav-webkit\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-a37a1--ska-validera-lösenordskrav-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska kunna skicka formuläret med alla giltiga fält" classname="form-registration.spec.ts" time="30.234">
+<failure message="form-registration.spec.ts:101:7 ska kunna skicka formuläret med alla giltiga fält" type="FAILURE">
+<![CDATA[  [webkit] › form-registration.spec.ts:101:7 › Formulärregistrering › ska kunna skicka formuläret med alla giltiga fält 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      100 |
+      101 |   test('ska kunna skicka formuläret med alla giltiga fält', async ({ page }) => {
+    > 102 |     await page.fill('input[placeholder="Namn"]', 'Maria Andersson');
+          |                ^
+      103 |     await page.fill('input[placeholder="Födelseår"]', '1985');
+      104 |     await page.fill('input[placeholder="E-post"]', 'maria.andersson@example.com');
+      105 |     await page.fill('input[placeholder="Lösenord"]', 'Lösenord123');
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:102:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-webkit\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › skalbarhetstest - flera användare samtidigt" classname="form-registration.spec.ts" time="30.203">
+<failure message="form-registration.spec.ts:113:7 skalbarhetstest - flera användare samtidigt" type="FAILURE">
+<![CDATA[  [webkit] › form-registration.spec.ts:113:7 › Formulärregistrering › skalbarhetstest - flera användare samtidigt 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      118 |
+      119 |     for (const user of testUsers) {
+    > 120 |       await page.fill('input[placeholder="Namn"]', user.name);
+          |                  ^
+      121 |       await page.fill('input[placeholder="Födelseår"]', user.year);
+      122 |       await page.fill('input[placeholder="E-post"]', user.email);
+      123 |       await page.fill('input[placeholder="Lösenord"]', user.password);
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:120:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-47c1e---flera-användare-samtidigt-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-47c1e---flera-användare-samtidigt-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-47c1e---flera-användare-samtidigt-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-47c1e---flera-användare-samtidigt-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-47c1e---flera-användare-samtidigt-webkit\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-47c1e---flera-användare-samtidigt-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="notes.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="webkit" tests="1" failures="1" skipped="0" time="30.402" errors="0">
+<testcase name="Anteckningar › ska kunna fylla i textfält och behålla värdet" classname="notes.spec.ts" time="30.402">
+<failure message="notes.spec.ts:4:7 ska kunna fylla i textfält och behålla värdet" type="FAILURE">
+<![CDATA[  [webkit] › notes.spec.ts:4:7 › Anteckningar › ska kunna fylla i textfält och behålla värdet ──────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      4 |   test('ska kunna fylla i textfält och behålla värdet', async ({ page }) => {
+      5 |     await page.goto('https://tap-ht24-testverktyg.github.io/form-demo/');
+    > 6 |     await page.fill('input[placeholder="Namn"]', 'Min anteckning');
+        |                ^
+      7 |     await expect(page.getByPlaceholder('Namn')).toHaveValue('Min anteckning');
+      8 |   });
+      9 | });
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\notes.spec.ts:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-webkit\video.webm]]
+
+[[ATTACHMENT|notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="themes.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="webkit" tests="1" failures="0" skipped="0" time="1.57" errors="0">
+<testcase name="Teman › ska ha läsbar primärknapp med definierade stilar" classname="themes.spec.ts" time="1.57">
+</testcase>
+</testsuite>
+<testsuite name="timer.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="webkit" tests="1" failures="1" skipped="0" time="30.493" errors="0">
+<testcase name="Prestanda-timer › ska ladda inom 3 sekunder och validera inom 1 sekund" classname="timer.spec.ts" time="30.493">
+<failure message="timer.spec.ts:4:7 ska ladda inom 3 sekunder och validera inom 1 sekund" type="FAILURE">
+<![CDATA[  [webkit] › timer.spec.ts:4:7 › Prestanda-timer › ska ladda inom 3 sekunder och validera inom 1 sekund 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="E-post"]')
+
+
+       9 |     expect(loadMs).toBeLessThan(3000);
+      10 |
+    > 11 |     await page.fill('input[placeholder="E-post"]', 'ogiltig-email');
+         |                ^
+      12 |     await page.getByRole('button', { name: 'Ok nu kör vi' }).click();
+      13 |     const v0 = Date.now();
+      14 |     await expect(page.getByText(/Ogiltig e-postadress/i)).toBeVisible();
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\timer.spec.ts:11:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-webkit\video.webm]]
+
+[[ATTACHMENT|timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="widgets.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="webkit" tests="1" failures="1" skipped="0" time="30.372" errors="0">
+<testcase name="Widgets › ska interagera med alla fält och skicka" classname="widgets.spec.ts" time="30.372">
+<failure message="widgets.spec.ts:5:7 ska interagera med alla fält och skicka" type="FAILURE">
+<![CDATA[  [webkit] › widgets.spec.ts:5:7 › Widgets › ska interagera med alla fält och skicka ───────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByPlaceholder('Namn')
+
+
+       at ..\pages\form-page.ts:26
+
+      24 |
+      25 |   async fillForm(name: string, birthYear: string, email: string, password: string) {
+    > 26 |     await this.nameInput.fill(name);
+         |                          ^
+      27 |     await this.birthYearInput.fill(birthYear);
+      28 |     await this.emailInput.fill(email);
+      29 |     await this.passwordInput.fill(password);
+        at FormPage.fillForm (C:\Jensen\python\TEST_2\tests\e2e\pages\form-page.ts:26:26)
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\widgets.spec.ts:8:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-webkit\video.webm]]
+
+[[ATTACHMENT|widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="accessibility.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="mobile-chrome" tests="1" failures="1" skipped="0" time="6.488" errors="0">
+<testcase name="Tillgänglighet › ska ha semantiska element och tillgänglig knapp" classname="accessibility.spec.ts" time="6.488">
+<failure message="accessibility.spec.ts:10:7 ska ha semantiska element och tillgänglig knapp" type="FAILURE">
+<![CDATA[  [mobile-chrome] › accessibility.spec.ts:10:7 › Tillgänglighet › ska ha semantiska element och tillgänglig knapp 
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator:  getByRole('button', { name: 'Ok nu kör vi' })
+    Expected: enabled
+    Received: disabled
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeEnabled" with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Ok nu kör vi' })
+        9 × locator resolved to <button disabled type="submit"> Ok nu kör vi </button>
+          - unexpected value "disabled"
+
+
+      10 |   test('ska ha semantiska element och tillgänglig knapp', async ({ page }) => {
+      11 |     await expect(page.getByRole('heading', { name: /Registrera dig/i })).toBeVisible();
+    > 12 |     await expect(page.getByRole('button', { name: 'Ok nu kör vi' })).toBeEnabled();
+         |                                                                      ^
+      13 |     await expect(page.getByPlaceholder('Namn')).toBeEditable();
+      14 |     await expect(page.getByPlaceholder('Födelseår')).toBeEditable();
+      15 |     await expect(page.getByPlaceholder('E-post')).toBeEditable();
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\accessibility.spec.ts:12:70
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|accessibility-Tillgängligh-6771b-ement-och-tillgänglig-knapp-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="diagnostic.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="mobile-chrome" tests="1" failures="1" skipped="0" time="6.451" errors="0">
+<testcase name="Diagnostik › ska ladda sidan utan konsolfel" classname="diagnostic.spec.ts" time="6.451">
+<failure message="diagnostic.spec.ts:9:7 ska ladda sidan utan konsolfel" type="FAILURE">
+<![CDATA[  [mobile-chrome] › diagnostic.spec.ts:9:7 › Diagnostik › ska ladda sidan utan konsolfel ───────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByPlaceholder('Namn')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByPlaceholder('Namn')
+
+
+      14 |
+      15 |     await expect(page.getByText('Registrera dig')).toBeVisible();
+    > 16 |     await expect(page.getByPlaceholder('Namn')).toBeVisible();
+         |                                                 ^
+      17 |     await expect(page.getByPlaceholder('Födelseår')).toBeVisible();
+      18 |     await expect(page.getByPlaceholder('E-post')).toBeVisible();
+      19 |     await expect(page.getByPlaceholder('Lösenord')).toBeVisible();
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\diagnostic.spec.ts:16:49
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|diagnostic-Diagnostik-ska-ladda-sidan-utan-konsolfel-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="form-performance.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="mobile-chrome" tests="1" failures="1" skipped="0" time="6.363" errors="0">
+<testcase name="Formulärregistrering › ska ladda formuläret korrekt" classname="form-performance.spec.ts" time="6.363">
+<failure message="form-performance.spec.ts:12:7 ska ladda formuläret korrekt" type="FAILURE">
+<![CDATA[  [mobile-chrome] › form-performance.spec.ts:12:7 › Formulärregistrering › ska ladda formuläret korrekt 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByPlaceholder('Namn')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByPlaceholder('Namn')
+
+
+      11 |
+      12 |   test('ska ladda formuläret korrekt', async () => {
+    > 13 |     await expect(formPage.nameInput).toBeVisible();
+         |                                      ^
+      14 |     await expect(formPage.birthYearInput).toBeVisible();
+      15 |     await expect(formPage.emailInput).toBeVisible();
+      16 |     await expect(formPage.passwordInput).toBeVisible();
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-performance.spec.ts:13:38
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|form-performance-Formulärr-4f419-ka-ladda-formuläret-korrekt-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="form-registration.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="mobile-chrome" tests="9" failures="9" skipped="0" time="273.501" errors="0">
+<testcase name="Formulärregistrering › ska ladda formuläret korrekt" classname="form-registration.spec.ts" time="1.278">
+<failure message="form-registration.spec.ts:10:7 ska ladda formuläret korrekt" type="FAILURE">
+<![CDATA[  [mobile-chrome] › form-registration.spec.ts:10:7 › Formulärregistrering › ska ladda formuläret korrekt 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Lösenord')
+    Expected: visible
+    Error: strict mode violation: getByText('Lösenord') resolved to 2 elements:
+        1) <div>Lösenord</div> aka getByText('Lösenord', { exact: true })
+        2) <p class="error visible"> Lösenordet är för lätt, välj något svårare. </p> aka getByText('Lösenordet är för lätt, välj')
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByText('Lösenord')
+
+
+      13 |     await expect(page.getByText('Födelseår')).toBeVisible();
+      14 |     await expect(page.getByText('E-post')).toBeVisible();
+    > 15 |     await expect(page.getByText('Lösenord')).toBeVisible();
+         |                                              ^
+      16 |     await expect(page.getByRole('button', { name: 'Ok nu kör vi' })).toBeVisible();
+      17 |   });
+      18 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:15:46
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-1ef1f-ka-ladda-formuläret-korrekt-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska kunna fylla i alla fält med giltig data" classname="form-registration.spec.ts" time="34.734">
+<failure message="form-registration.spec.ts:19:7 ska kunna fylla i alla fält med giltig data" type="FAILURE">
+<![CDATA[  [mobile-chrome] › form-registration.spec.ts:19:7 › Formulärregistrering › ska kunna fylla i alla fält med giltig data 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      19 |   test('ska kunna fylla i alla fält med giltig data', async ({ page }) => {
+      20 |     // Fyll i formuläret med giltig data
+    > 21 |     await page.fill('input[placeholder="Namn"]', 'Anna Svensson');
+         |                ^
+      22 |     await page.fill('input[placeholder="Födelseår"]', '1990');
+      23 |     await page.fill('input[placeholder="E-post"]', 'anna.svensson@example.com');
+      24 |     await page.fill('input[placeholder="Lösenord"]', 'Secure123');
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:21:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-2ef52-i-alla-fält-med-giltig-data-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska visa valideringsfel för för enkelt lösenord" classname="form-registration.spec.ts" time="34.298">
+<failure message="form-registration.spec.ts:32:7 ska visa valideringsfel för för enkelt lösenord" type="FAILURE">
+<![CDATA[  [mobile-chrome] › form-registration.spec.ts:32:7 › Formulärregistrering › ska visa valideringsfel för för enkelt lösenord 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      31 |
+      32 |   test('ska visa valideringsfel för för enkelt lösenord', async ({ page }) => {
+    > 33 |     await page.fill('input[placeholder="Namn"]', 'Nisse');
+         |                ^
+      34 |     await page.fill('input[placeholder="Födelseår"]', '2001');
+      35 |     await page.fill('input[placeholder="E-post"]', 'example@gmail.com');
+      36 |     await page.fill('input[placeholder="Lösenord"]', '1234');
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:33:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-99d3a-fel-för-för-enkelt-lösenord-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska validera namnfältet" classname="form-registration.spec.ts" time="33.754">
+<failure message="form-registration.spec.ts:44:7 ska validera namnfältet" type="FAILURE">
+<![CDATA[  [mobile-chrome] › form-registration.spec.ts:44:7 › Formulärregistrering › ska validera namnfältet 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      44 |   test('ska validera namnfältet', async ({ page }) => {
+      45 |     // Testa tomt namn
+    > 46 |     await page.fill('input[placeholder="Namn"]', '');
+         |                ^
+      47 |     await page.click('button:has-text("Ok nu kör vi")');
+      48 |     await expect(page.getByText(/Namn är obligatoriskt|fältet måste fyllas i/i)).toBeVisible();
+      49 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:46:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-80f71-ing-ska-validera-namnfältet-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-80f71-ing-ska-validera-namnfältet-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-80f71-ing-ska-validera-namnfältet-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-80f71-ing-ska-validera-namnfältet-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-80f71-ing-ska-validera-namnfältet-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-80f71-ing-ska-validera-namnfältet-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska validera födelseår" classname="form-registration.spec.ts" time="31.103">
+<failure message="form-registration.spec.ts:55:7 ska validera födelseår" type="FAILURE">
+<![CDATA[  [mobile-chrome] › form-registration.spec.ts:55:7 › Formulärregistrering › ska validera födelseår ─
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Födelseår"]')
+
+
+      55 |   test('ska validera födelseår', async ({ page }) => {
+      56 |     // Testa ogiltigt år
+    > 57 |     await page.fill('input[placeholder="Födelseår"]', '1800');
+         |                ^
+      58 |     await page.click('button:has-text("Ok nu kör vi")');
+      59 |     await expect(page.getByText(/Ogiltigt födelseår/i)).toBeVisible();
+      60 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:57:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-9cbd8-ring-ska-validera-födelseår-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska validera e-postformat" classname="form-registration.spec.ts" time="31.403">
+<failure message="form-registration.spec.ts:70:7 ska validera e-postformat" type="FAILURE">
+<![CDATA[  [mobile-chrome] › form-registration.spec.ts:70:7 › Formulärregistrering › ska validera e-postformat 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="E-post"]')
+
+
+      69 |
+      70 |   test('ska validera e-postformat', async ({ page }) => {
+    > 71 |     await page.fill('input[placeholder="E-post"]', 'ogiltig-email');
+         |                ^
+      72 |     await page.click('button:has-text("Ok nu kör vi")');
+      73 |     await expect(page.getByText(/Ogiltig e-postadress/i)).toBeVisible();
+      74 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:71:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-b88db-g-ska-validera-e-postformat-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-b88db-g-ska-validera-e-postformat-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-b88db-g-ska-validera-e-postformat-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-b88db-g-ska-validera-e-postformat-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-b88db-g-ska-validera-e-postformat-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-b88db-g-ska-validera-e-postformat-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska validera lösenordskrav" classname="form-registration.spec.ts" time="43.607">
+<failure message="form-registration.spec.ts:82:7 ska validera lösenordskrav" type="FAILURE">
+<![CDATA[  [mobile-chrome] › form-registration.spec.ts:82:7 › Formulärregistrering › ska validera lösenordskrav 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Lösenord"]')
+
+
+      82 |   test('ska validera lösenordskrav', async ({ page }) => {
+      83 |     // Testa för kort lösenord
+    > 84 |     await page.fill('input[placeholder="Lösenord"]', '123');
+         |                ^
+      85 |     await page.click('button:has-text("Ok nu kör vi")');
+      86 |     await expect(page.getByText(/Lösenordet måste vara minst 6 tecken/i)).toBeVisible();
+      87 |
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:84:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-a37a1--ska-validera-lösenordskrav-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-a37a1--ska-validera-lösenordskrav-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-a37a1--ska-validera-lösenordskrav-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-a37a1--ska-validera-lösenordskrav-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-a37a1--ska-validera-lösenordskrav-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-a37a1--ska-validera-lösenordskrav-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › ska kunna skicka formuläret med alla giltiga fält" classname="form-registration.spec.ts" time="31.733">
+<failure message="form-registration.spec.ts:101:7 ska kunna skicka formuläret med alla giltiga fält" type="FAILURE">
+<![CDATA[  [mobile-chrome] › form-registration.spec.ts:101:7 › Formulärregistrering › ska kunna skicka formuläret med alla giltiga fält 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      100 |
+      101 |   test('ska kunna skicka formuläret med alla giltiga fält', async ({ page }) => {
+    > 102 |     await page.fill('input[placeholder="Namn"]', 'Maria Andersson');
+          |                ^
+      103 |     await page.fill('input[placeholder="Födelseår"]', '1985');
+      104 |     await page.fill('input[placeholder="E-post"]', 'maria.andersson@example.com');
+      105 |     await page.fill('input[placeholder="Lösenord"]', 'Lösenord123');
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:102:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-202ab-läret-med-alla-giltiga-fält-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Formulärregistrering › skalbarhetstest - flera användare samtidigt" classname="form-registration.spec.ts" time="31.591">
+<failure message="form-registration.spec.ts:113:7 skalbarhetstest - flera användare samtidigt" type="FAILURE">
+<![CDATA[  [mobile-chrome] › form-registration.spec.ts:113:7 › Formulärregistrering › skalbarhetstest - flera användare samtidigt 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      118 |
+      119 |     for (const user of testUsers) {
+    > 120 |       await page.fill('input[placeholder="Namn"]', user.name);
+          |                  ^
+      121 |       await page.fill('input[placeholder="Födelseår"]', user.year);
+      122 |       await page.fill('input[placeholder="E-post"]', user.email);
+      123 |       await page.fill('input[placeholder="Lösenord"]', user.password);
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\form-registration.spec.ts:120:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-47c1e---flera-användare-samtidigt-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\form-registration-Formulär-47c1e---flera-användare-samtidigt-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\form-registration-Formulär-47c1e---flera-användare-samtidigt-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|form-registration-Formulär-47c1e---flera-användare-samtidigt-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|form-registration-Formulär-47c1e---flera-användare-samtidigt-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|form-registration-Formulär-47c1e---flera-användare-samtidigt-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="notes.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="mobile-chrome" tests="1" failures="1" skipped="0" time="31.411" errors="0">
+<testcase name="Anteckningar › ska kunna fylla i textfält och behålla värdet" classname="notes.spec.ts" time="31.411">
+<failure message="notes.spec.ts:4:7 ska kunna fylla i textfält och behålla värdet" type="FAILURE">
+<![CDATA[  [mobile-chrome] › notes.spec.ts:4:7 › Anteckningar › ska kunna fylla i textfält och behålla värdet 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="Namn"]')
+
+
+      4 |   test('ska kunna fylla i textfält och behålla värdet', async ({ page }) => {
+      5 |     await page.goto('https://tap-ht24-testverktyg.github.io/form-demo/');
+    > 6 |     await page.fill('input[placeholder="Namn"]', 'Min anteckning');
+        |                ^
+      7 |     await expect(page.getByPlaceholder('Namn')).toHaveValue('Min anteckning');
+      8 |   });
+      9 | });
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\notes.spec.ts:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|notes-Anteckningar-ska-kun-864f1-textfält-och-behålla-värdet-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="themes.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="mobile-chrome" tests="1" failures="0" skipped="0" time="1.761" errors="0">
+<testcase name="Teman › ska ha läsbar primärknapp med definierade stilar" classname="themes.spec.ts" time="1.761">
+</testcase>
+</testsuite>
+<testsuite name="timer.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="mobile-chrome" tests="1" failures="1" skipped="0" time="31.064" errors="0">
+<testcase name="Prestanda-timer › ska ladda inom 3 sekunder och validera inom 1 sekund" classname="timer.spec.ts" time="31.064">
+<failure message="timer.spec.ts:4:7 ska ladda inom 3 sekunder och validera inom 1 sekund" type="FAILURE">
+<![CDATA[  [mobile-chrome] › timer.spec.ts:4:7 › Prestanda-timer › ska ladda inom 3 sekunder och validera inom 1 sekund 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[placeholder="E-post"]')
+
+
+       9 |     expect(loadMs).toBeLessThan(3000);
+      10 |
+    > 11 |     await page.fill('input[placeholder="E-post"]', 'ogiltig-email');
+         |                ^
+      12 |     await page.getByRole('button', { name: 'Ok nu kör vi' }).click();
+      13 |     const v0 = Date.now();
+      14 |     await expect(page.getByText(/Ogiltig e-postadress/i)).toBeVisible();
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\timer.spec.ts:11:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|timer-Prestanda-timer-ska--0cc6a--och-validera-inom-1-sekund-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="widgets.spec.ts" timestamp="2025-11-22T15:25:16.394Z" hostname="mobile-chrome" tests="1" failures="1" skipped="0" time="32.785" errors="0">
+<testcase name="Widgets › ska interagera med alla fält och skicka" classname="widgets.spec.ts" time="32.785">
+<failure message="widgets.spec.ts:5:7 ska interagera med alla fält och skicka" type="FAILURE">
+<![CDATA[  [mobile-chrome] › widgets.spec.ts:5:7 › Widgets › ska interagera med alla fält och skicka ────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByPlaceholder('Namn')
+
+
+       at ..\pages\form-page.ts:26
+
+      24 |
+      25 |   async fillForm(name: string, birthYear: string, email: string, password: string) {
+    > 26 |     await this.nameInput.fill(name);
+         |                          ^
+      27 |     await this.birthYearInput.fill(birthYear);
+      28 |     await this.emailInput.fill(email);
+      29 |     await this.passwordInput.fill(password);
+        at FormPage.fillForm (C:\Jensen\python\TEST_2\tests\e2e\pages\form-page.ts:26:26)
+        at C:\Jensen\python\TEST_2\tests\e2e\specs\widgets.spec.ts:8:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\..\test-results\widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\..\test-results\widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\..\test-results\widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|widgets-Widgets-ska-interagera-med-alla-fält-och-skicka-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
