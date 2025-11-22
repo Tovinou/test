@@ -1,10 +1,7 @@
-// helpers.ts
+import { Page, expect } from '@playwright/test';
+
 export async function waitForAppReady(page: Page) {
-    // Förbättrad waiting logic
-  }
-  
-  // test-data.ts
-  export const TEST_USERS = {
-    valid: { name: 'Test User', year: '1990', email: 'test@example.com', password: 'Secure123' },
-    invalid: { /* ... */ }
-  };
+  await page.waitForLoadState('domcontentloaded');
+  await page.waitForLoadState('networkidle');
+  await expect(page.getByText('Registrera dig')).toBeVisible();
+}
