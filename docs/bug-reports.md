@@ -1,6 +1,7 @@
 # Bug Reports
 
 ## BR-001: Submit button disabled by default conflicts with test expectation
+
 - Type: Test defect
 - Severity: Low
 - Status: Open
@@ -20,6 +21,7 @@
   - Adjust test to assert visibility instead of enabled state until fields are valid
 
 ## BR-002: Validation copy mismatch between tests and application
+
 - Type: Test defect
 - Severity: Medium
 - Status: Open
@@ -34,6 +36,7 @@
   - Prefer role/alert regions and generic error containers for assertions
 
 ## BR-003: Success confirmation text may be absent post submission
+
 - Type: Test defect (to verify)
 - Severity: Medium
 - Status: Open
@@ -48,6 +51,7 @@
   - Adjust success criteria to reflect app behavior (no error, possibly reset/thank‑you state)
 
 ## BR-004: High failure count in multi‑browser matrix
+
 - Type: Test suite configuration issue
 - Severity: Medium
 - Status: Open
