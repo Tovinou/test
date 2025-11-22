@@ -14,6 +14,10 @@ TEST/
   │   └── workflows/
   │       └── deploy.yml             # Deploy app
   │
+  ├── public/
+  │   └── vite.svg
+  ├── src
+  ├── timer-vue-temp
   └── E2E_test/
       ├── .github/
       │   └── workflows/
