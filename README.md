@@ -9,17 +9,35 @@ E2E-tester för Timer & Notes Vue App skrivna med Playwright.
 ## Projektstruktur
 
 ```
-E2E_test/
-├── tests/
-│   ├── timer.spec.ts          # Timer-specifika tester
-│   ├── notes.spec.ts          # Antecknings-specifika tester  
-│   ├── widgets.spec.ts        # Widget-hanterings tester
-│   ├── themes.spec.ts         # Tema-relaterade tester
-│   ├── accessibility.spec.ts  # Tillgänglighet och användbarhet
-│   └── performance.spec.ts    # Prestandatester
-├── playwright.config.ts       # Playwright konfiguration
-├── package.json
-└── README.md
+TEST/
+  ├── .github/
+  │   └── workflows/
+  │       └── deploy.yml             # Deploy app
+  │
+  └── E2E_test/
+      ├── .github/
+      │   └── workflows/
+      │       └── e2e-tests.yml      # Test app
+      ├── test-results/
+      ├── node_modules/
+      ├── tests/
+      │   ├── timer.spec.ts          # Timer-specifika tester
+      │   ├── notes.spec.ts          # Antecknings-specifika tester  
+      │   ├── widgets.spec.ts        # Widget-hanterings tester
+      │   ├── themes.spec.ts         # Tema-relaterade tester
+      │   ├── accessibility.spec.ts  # Tillgänglighet och användbarhet
+      │   ├── performance.spec.ts    # Prestandatester
+      │   ├── anteckning.spec.ts     # Anteckningstester
+      │   ├── helpers.ts             # Hjälpfunktioner
+      │   └── diagnostic.spec.ts     # Diagnostiska tester
+      ├── playwright.config.ts       # Playwright konfiguration
+      ├── package.json
+      ├── package-lock.json
+      ├── tsconfig.json
+      ├── README.md
+      ├── TEST-DOCUMENTATION.md
+      ├── PUBLISH_APP.md
+      └── diagnostic-homepage.png
 ```
 
 ## Installation
