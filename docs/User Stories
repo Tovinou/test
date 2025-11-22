@@ -1,0 +1,62 @@
+User Stories
+
+## US1: Som användare vill jag kunna fylla i ett registreringsformulär så att jag kan skapa ett konto
+
+- Som användare vill jag kunna ange mitt namn
+
+- Som användare vill jag kunna ange mitt födelseår
+
+- Som användare vill jag kunna ange min e-postadress
+
+- Som användare vill jag kunna ange ett lösenord
+
+
+## US2: Som användare vill jag få valideringsfeedback så att jag kan korrigera mina inmatningar
+
+- Som användare vill jag veta om lösenordet är för enkelt
+
+- Som användare vill jag få bekräftelse när alla fält är korrekt ifyllda
+
+
+## US3: Som system vill jag validera användardata så att endast korrekt information accepteras
+
+
+Acceptanskriterier
+
+## AC1: Namnfält
+
+- Måste kunna acceptera både för- och efternamn
+
+- Måste vara obligatoriskt
+
+- Måste acceptera minst 2 tecken
+
+Får inte innehålla specialtecken eller siffror
+
+## AC2: Födelseår
+
+- Måste vara ett giltigt år (1900-2024)
+
+- Måste vara ett nummer
+
+- Användaren måste vara minst 13 år gammal
+
+- Måste vara obligatoriskt
+
+## AC3: E-post
+
+Måste ha korrekt e-postformat (text@domain.com)
+
+Måste vara obligatoriskt
+
+Måste vara unikt (simulera i test)
+
+## AC4: Lösenord
+
+Måste vara minst 6 tecken långt
+
+Måste innehålla både bokstäver och siffror
+
+Måste visa valideringsmeddelande vid för enkelt lösenord
+
+Måste vara obligatoriskt
