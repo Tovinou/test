@@ -9,9 +9,6 @@ on:
 jobs:
   db-test:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: TEST_2
     services:
       postgres:
         image: postgres:15
@@ -54,5 +51,5 @@ jobs:
       with:
         name: db-test-results
         path: |
-          TEST_2/test-results/
-          TEST_2/playwright-report/
+          test-results/
+          playwright-report/

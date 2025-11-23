@@ -9,9 +9,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-    defaults:
-      run:
-        working-directory: TEST_2
     
     steps:
     - name: Checkout
@@ -33,4 +30,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./TEST_2/playwright-report
+        publish_dir: ./playwright-report
