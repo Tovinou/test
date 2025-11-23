@@ -102,7 +102,7 @@ jobs:
       run: npm ci
 
     - name: Install Playwright
-      run: npx playwright install chromium
+      run: npx playwright install --with-deps
 
     - name: Run performance tests
       run: npx playwright test -c config/playwright.config.ts tests/e2e/specs/form-performance.spec.ts --reporter=line
