@@ -1,16 +1,16 @@
-Formulärregistrering Test Suite
-Automatiserade Playwright/TypeScript‑tester som validerar ett registreringsformulärs funktionalitet, tillgänglighet och prestanda.
+Form Registration Test Suite
+Automated Playwright/TypeScript tests that validate a registration form’s functionality, accessibility, and performance.
 
-🚀 Översikt
-Testerna täcker formulärfält, valideringar, tillgänglighet, performance samt enklare widgetinteraktioner. Projektet körs mot `https://tap-ht24-testverktyg.github.io/form-demo/` och är förberett för körning i CI.
+Overview
+The tests cover form fields, validations, accessibility, performance, and basic widget interactions. The suite targets `https://tap-ht24-testverktyg.github.io/form-demo/` and is ready for CI execution.
 
-🛠 Teknisk Stack
-- Testramverk: Playwright
-- Språk: TypeScript
-- Reporter: HTML, JSON, JUnit
-- Körning: Headless/Headed, multi‑browser
+Tech Stack
+- Test framework: Playwright
+- Language: TypeScript
+- Reporters: HTML, JSON, JUnit
+- Execution: Headless/Headed, multi‑browser
 
-📁 Struktur
+Project Structure
 ```
 TEST_2/
 ├── .github/workflows/
@@ -60,49 +60,76 @@ TEST_2/
 └── docker-compose.yml
 ```
 
-⚙️ Installation
+Install
 ```
 npm install
 npx playwright install
 ```
 
-🧪 Körning
-- `npm run test` – kör alla tester med central config
-- `npm run test:e2e` – kör e2e‑specar
-- `npm run test:form` – kör formulärspecar
-- `npm run test:ui` – headed läge
-- `npm run test:debug` – debug‑läge
+Run Tests
+- `npm run test` – run all tests using the central config
+- `npm run test:e2e` – run e2e specs
+- `npm run test:form` – run form‑focused specs
+- `npm run test:ui` – headed mode
+- `npm run test:debug` – debug mode
 
-📊 Rapporter
-- `npm run test:ci` – genererar HTML/line rapporter
-- `npm run test:report` – öppnar HTML‑rapporten i `test-results/html-report`
+Reports
+- `npm run test:ci` – generate HTML/line reports
+- `npm run test:report` – open the HTML report under `test-results/html-report`
 
-🧹 Kodkvalitet
+Code Quality
 - `npm run lint`
 - `npm run lint:fix`
 - ESLint v9 flat config: `eslint.config.cjs`
 
-🔧 Konfiguration
-- Base URL och reporter styrs via `config/playwright.config.ts`
-- TypeScript‑paths och typer styrs via `config/tsconfig.json`
+Configuration
+- Base URL and reporters via `config/playwright.config.ts`
+- TypeScript paths and options via `config/tsconfig.json`
 
-🌐 Miljövariabler
-Skapa en `.env` (valfritt) baserad på `.env.example`:
+Environment Variables
+Create a `.env` (optional) based on `.env.example`:
 ```
 BASE_URL=https://tap-ht24-testverktyg.github.io/form-demo/
 CI=false
 ```
 
-📚 Testscenarier
-- Formulärladdning: element och knapp synliga
-- Validering: namn, födelseår, e‑post, lösenord
-- Lyckad registrering: giltig data och submission
-- Performance: sidladdning < 3s, valideringsrespons < 1s
-- Tillgänglighet: semantiska roller och interaktion
-- Widgets: enkel interaktion med fält/knapp
+Test Scenarios
+- Form load: elements and submit button visible
+- Validation: name, birth year, email, password
+- Successful registration: valid data + submission
+- Performance: page load < 3s, validation response < 1s
+- Accessibility: semantic roles and interactions
+- Widgets: basic interactions with fields/button
 
-🤖 CI
-GitHub Actions workflow kör unit/e2e/performance, installerar Playwright‑drivare och publicerar rapporter.
+CI
+GitHub Actions workflows run unit/e2e/performance, install Playwright browsers with `--with-deps`, and publish reports. Security tests run on `pull_request` events and can be enabled via `workflow_dispatch`.
 
-Licens
+Troubleshooting
+- Missing browser dependencies on Linux runners
+  - Symptom: `browserType.launch` with “Host system is missing dependencies to run browsers”
+  - Fix: run `npx playwright install --with-deps` before tests in CI
+- Reporter/output directory clash
+  - Symptom: “HTML reporter output folder clashes with the tests output folder”
+  - Fix: set `outputDir` to `test-results/results` and HTML reporter `outputFolder` to `test-results/html-report` in `config/playwright.config.ts`
+- Wrong working directory in workflows
+  - Symptom: “No such file or directory” for `/usr/bin/bash` or missing project path
+  - Fix: run workflows from repo root; avoid non‑existent `working-directory`; ensure artifact/publish paths match current structure
+- Missing unit script in CI
+  - Symptom: `npm error Missing script: "test:unit"`
+  - Fix: add a placeholder `test:unit` or modify workflow to skip unit tests
+- Disabled submit button and click timeouts
+  - Symptom: click action retries on disabled submit
+  - Fix: use label‑based selectors (`getByLabel`), trigger validation via focus/blur, and avoid asserting enabled until fields are valid
+- Slow page/resource in CI
+  - Symptom: `toBeVisible` timeouts
+  - Fix: add resilient waits or increase timeouts for critical selectors; verify network access to the base URL
+
+CI Quick Checklist
+- Checkout and setup Node
+- `npm ci`
+- `npx playwright install --with-deps`
+- `npx playwright test -c config/playwright.config.ts`
+- Upload `test-results` / publish HTML report
+
+License
 MIT
