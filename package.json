@@ -9,6 +9,7 @@
     "test:debug": "playwright test -c config/playwright.config.ts --debug",
     "test:report": "playwright show-report test-results/html-report",
     "test:ci": "playwright test -c config/playwright.config.ts --reporter=html,line",
+    "test:unit": "node -e \"console.log('No unit tests configured')\"",
     "install:browsers": "playwright install",
     "lint": "eslint tests/ --ext .ts",
     "lint:fix": "eslint tests/ --ext .ts --fix"

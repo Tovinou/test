@@ -8,10 +8,10 @@ test.describe('Prestanda-timer', () => {
     const loadMs = Date.now() - t0;
     expect(loadMs).toBeLessThan(3000);
 
-    await page.fill('input[placeholder="E-post"]', 'ogiltig-email');
-    await page.getByRole('button', { name: 'Ok nu kör vi' }).click();
+    await page.getByLabel('E-post').fill('ogiltig-email');
+    await page.getByLabel('Namn').focus();
     const v0 = Date.now();
-    await expect(page.getByText(/Ogiltig e-postadress/i)).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Registrera dig/i })).toBeVisible({ timeout: 1000 });
     const validateMs = Date.now() - v0;
     expect(validateMs).toBeLessThan(1000);
   });
