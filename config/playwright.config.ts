@@ -2,7 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: '../tests/e2e/specs',
-  outputDir: '../test-results',
+  outputDir: '../test-results/results',
   
   use: {
     baseURL: 'https://tap-ht24-testverktyg.github.io/form-demo/',

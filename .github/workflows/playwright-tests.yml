@@ -73,15 +73,14 @@ jobs:
       with:
         name: playwright-report-${{ matrix.browser }}-${{ matrix.node-version }}
         path: |
-          playwright-report/
-          test-results/
+          TEST_2/test-results/
         retention-days: 7
 
     - name: Upload test summary
       if: always()
       uses: test-summary/action@v2
       with:
-        paths: test-results/**/*.xml
+        paths: TEST_2/test-results/**/*.xml
 
   performance-tests:
     name: Performance Tests
