@@ -11,10 +11,10 @@ export class FormPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.nameInput = page.getByPlaceholder('Namn');
-    this.birthYearInput = page.getByPlaceholder('Födelseår');
-    this.emailInput = page.getByPlaceholder('E-post');
-    this.passwordInput = page.getByPlaceholder('Lösenord');
+    this.nameInput = page.getByLabel('Namn');
+    this.birthYearInput = page.getByLabel('Födelseår');
+    this.emailInput = page.getByLabel('E-post');
+    this.passwordInput = page.getByLabel('Lösenord');
     this.submitButton = page.getByRole('button', { name: 'Ok nu kör vi' });
   }
 

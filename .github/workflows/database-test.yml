@@ -9,6 +9,9 @@ on:
 jobs:
   db-test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: TEST_2
     services:
       postgres:
         image: postgres:15
@@ -40,7 +43,7 @@ jobs:
       run: npx playwright install
 
     - name: Run database tests
-      run: npx playwright test
+      run: npx playwright test -c config/playwright.config.ts
       env:
         DATABASE_URL: postgresql://postgres:postgres@localhost:5432/testdb
         CI: true
@@ -51,5 +54,5 @@ jobs:
       with:
         name: db-test-results
         path: |
-          test-results/
-          playwright-report/
+          TEST_2/test-results/
+          TEST_2/playwright-report/

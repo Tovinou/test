@@ -9,10 +9,12 @@ test.describe('Tillgänglighet', () => {
 
   test('ska ha semantiska element och tillgänglig knapp', async ({ page }) => {
     await expect(page.getByRole('heading', { name: /Registrera dig/i })).toBeVisible();
-    await expect(page.getByRole('button', { name: 'Ok nu kör vi' })).toBeEnabled();
-    await expect(page.getByPlaceholder('Namn')).toBeEditable();
-    await expect(page.getByPlaceholder('Födelseår')).toBeEditable();
-    await expect(page.getByPlaceholder('E-post')).toBeEditable();
-    await expect(page.getByPlaceholder('Lösenord')).toBeEditable();
+    const submit = page.getByRole('button', { name: 'Ok nu kör vi' });
+    await expect(submit).toBeVisible();
+    await expect(submit).toHaveAccessibleName('Ok nu kör vi');
+    await expect(page.getByLabel('Namn')).toBeEditable();
+    await expect(page.getByLabel('Födelseår')).toBeEditable();
+    await expect(page.getByLabel('E-post')).toBeEditable();
+    await expect(page.getByLabel('Lösenord')).toBeEditable();
   });
 });

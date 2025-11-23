@@ -13,10 +13,10 @@ test.describe('Diagnostik', () => {
     });
 
     await expect(page.getByText('Registrera dig')).toBeVisible();
-    await expect(page.getByPlaceholder('Namn')).toBeVisible();
-    await expect(page.getByPlaceholder('Födelseår')).toBeVisible();
-    await expect(page.getByPlaceholder('E-post')).toBeVisible();
-    await expect(page.getByPlaceholder('Lösenord')).toBeVisible();
+    await expect(page.getByLabel('Namn')).toBeVisible();
+    await expect(page.getByLabel('Födelseår')).toBeVisible();
+    await expect(page.getByLabel('E-post')).toBeVisible();
+    await expect(page.getByLabel('Lösenord')).toBeVisible();
     await expect(page.getByRole('button', { name: 'Ok nu kör vi' })).toBeVisible();
 
     expect(errors.length).toBe(0);
